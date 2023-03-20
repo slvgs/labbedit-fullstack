@@ -7,6 +7,7 @@ import {
     PostDetailPage
 
 } from '../pages'
+import { Header } from '../components';
 
 
 
@@ -16,8 +17,10 @@ export const Router =() => {
 
         <BrowserRouter>
 
-            <Routes>
+            <Header/>
 
+            <Routes>
+               
                 <Route  path='/login' element={<LoginPage/>}/>
                 <Route  path='/signup' element={<SignupPage/>}/>
                 <Route  path='/feed' element={<FeedPage/>}/>
