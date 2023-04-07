@@ -9,10 +9,30 @@ import { extendTheme } from "@chakra-ui/react"
                     bg: "laranja.500"
 
                 },
-                form: {
+                formMain: {
                     width: "100%",
                     bg: "laranja.500",
-                    padding: "10px"
+                    color: "white",
+                    _hover: {
+                        bg: "white",
+                        color:"laranja.500",
+                        border:"3px solid #FE7E02"
+
+                    }
+                    
+                },
+                formSecondary: {
+                    width: "100%",
+                    bg: "white",
+                    color: "laranja.500",
+                    _hover:{
+                        fontWeight: "normal",
+                        color: "black",
+                        textDecoration: "underline",
+                        border: "1px solid grey"
+                    }
+
+
                 }
             }
         }
