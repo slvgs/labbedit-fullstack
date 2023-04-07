@@ -18,6 +18,6 @@ export const goToPostPage = (navigator) => {
     navigator('/add-post')
 }
 
-export const goToPostDetailPage = (navigator) => {
-    navigator(`/post/${id}`)
-}
+// export const goToPostDetailPage = (navigator) => {
+//     navigator(`/post/${id}`)
+// }

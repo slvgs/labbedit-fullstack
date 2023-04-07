@@ -14,10 +14,13 @@ import {
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import logo from '../../assets/logo labbedit.png'
-
+import { useNavigate } from 'react-router-dom'
+import { goToSignupPage } from '../../routes'
 
 
 export const LoginPage = () => {
+
+    const navigate = useNavigate()
 
 
     const [form, onChangeInputs, clearInputs] = useForm({
@@ -63,7 +66,7 @@ export const LoginPage = () => {
                     />
                   
                     <Button type='submit' variant='formMain'>Enviar</Button>
-                    <Button type='cadastrar' variant='formSecondary'>Não tem uma conta? Cadastre-se Já!</Button>
+                    <Button onClick={() => goToSignupPage(navigate)} type='cadastrar' variant='formSecondary'>Não tem uma conta? Cadastre-se Já!</Button>
 
                 </form>
 
