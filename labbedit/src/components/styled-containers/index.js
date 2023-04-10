@@ -77,7 +77,7 @@ export const AddContentBox = styled.div`
 
 
    }
-
+   
     
    
 `

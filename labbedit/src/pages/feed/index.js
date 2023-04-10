@@ -122,6 +122,7 @@ export const FeedPage = () => {
                         />
 
                         <Button
+                            as="buttonPost"
                             type="submit"
                             variant="addContent"
                         
