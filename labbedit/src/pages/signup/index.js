@@ -1,5 +1,5 @@
 import { useForm } from '../../hooks'
-import { validateEmail, validateName, validatePassword } from '../../constants'
+import { Signup, validateEmail, validateName, validatePassword } from '../../constants'
 import {
     CenteredPageContainer as SignupPageContainer,
     FormContainer,
@@ -15,10 +15,15 @@ import {
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import logo from '../../assets/logo labbedit.png'
+import { goToFeedPage } from '../../routes'
+import { useNavigate } from 'react-router-dom'
 
 
 
 export const SignupPage = () => {
+
+
+    const navigate = useNavigate()
 
 
     const [form, onChangeInputs, clearInputs] = useForm({
@@ -39,6 +44,28 @@ export const SignupPage = () => {
         setNameValid(validateName(form.name))
         setIsEmailValid(validateEmail(form.email))
         setPasswordValid(validatePassword(form.password));
+        
+               
+        try {
+
+            const {token} = isEmailValid && isPasswordValid && isNameValid && Signup({
+                
+                name: form.name,
+                email: form.email,
+                password: form.password
+            
+            
+            })
+            localStorage.setItem("labook.token", token)
+            goToFeedPage(navigate)
+            
+        } catch (error) {
+            console.log(error)
+            
+        }
+    
+    
+    
     }
 
 
