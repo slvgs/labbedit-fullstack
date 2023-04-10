@@ -15,7 +15,8 @@ import {
 import { useState } from 'react'
 import logo from '../../assets/logo labbedit.png'
 import { useNavigate } from 'react-router-dom'
-import { goToSignupPage } from '../../routes'
+import { goToSignupPage, goToFeedPage} from '../../routes'
+import { Login } from '../../constants'
 
 
 export const LoginPage = () => {
@@ -38,6 +39,31 @@ export const LoginPage = () => {
         console.log(form)
         setIsEmailValid(validateEmail(form.email))
         setPasswordValid(validatePassword(form.password));
+        
+
+        
+        try {
+
+            const {token} = isEmailValid && isPasswordValid && Login({
+            
+                email: form.email,
+                password: form.password
+            
+            
+            })
+            localStorage.setItem("labook.token", token)
+            goToFeedPage(navigate)
+            
+            
+        } catch (error) {
+            console.log(error)
+            
+        }
+        
+        
+        
+         
+    
     }
 
 
