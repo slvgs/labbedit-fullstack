@@ -7,9 +7,10 @@ _Trata-se de uma rede social com compartilhamento de posts onde o usuário pode 
 ### 🏠 [Homepage](https://labbeditsilverio.surge.sh/login)
 <br>
 
-![](/src/assets/edit%20telas.jpeg)
+![](../)
 <br>
 
+![edit telas](https://user-images.githubusercontent.com/111307136/230817547-f03965ce-8814-461c-ad61-cb2771870f2f.jpeg)
 
 <br>
 
